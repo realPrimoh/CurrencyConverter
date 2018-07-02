@@ -1,12 +1,16 @@
 import React, { PropTypes } from 'react';
-import { View } from 'react-native';
+import { View, StatusBar } from 'react-native';
 
-const Container = () => (
-    <View>
+import styles from './styles';
+
+const Container = ({ children }) => (
+    <View={styles.container}>
         {children}
     </View>
 );
 
-<Container>
-    <Text />
-</Container>
+Container.PropTypes = {
+  children: PropTypes.element,
+}
+
+export default Container;
